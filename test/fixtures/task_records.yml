@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: task_records
+#
+#  id         :integer          not null, primary key
+#  task_id    :integer
+#  last_run   :datetime
+#  message    :string
+#  stacktrace :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: one
+  last_run: 2018-06-25 21:35:21
+  message: MyString
+  stacktrace: 
+
+two:
+  task: two
+  last_run: 2018-06-25 21:35:21
+  message: MyString
+  stacktrace: 
