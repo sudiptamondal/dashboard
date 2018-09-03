@@ -13,4 +13,11 @@
 class Tweet < ApplicationRecord
   has_one :schedule, foreign_key: :what_id, dependent: :destroy
   accepts_nested_attributes_for :schedule
+	before_save :set_attr
+	private
+		def set_attr
+				self.schedule.what = self.class.name
+		end
+
+
 end
