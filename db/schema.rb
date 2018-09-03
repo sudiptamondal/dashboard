@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180728161538) do
+ActiveRecord::Schema.define(version: 20180903184144) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -51,6 +51,25 @@ ActiveRecord::Schema.define(version: 20180728161538) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "schedules", force: :cascade do |t|
+    t.boolean  "is_scheduled"
+    t.datetime "schedule_start_date"
+    t.datetime "schedule_end_date"
+    t.string   "what"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.boolean  "on_monday"
+    t.boolean  "on_tuesday"
+    t.boolean  "on_wednesday"
+    t.boolean  "on_thursday"
+    t.boolean  "on_friday"
+    t.boolean  "on_saturday"
+    t.boolean  "on_sunday"
+    t.boolean  "repeat"
+    t.text     "custom"
+    t.integer  "what_id"
+  end
+
   create_table "task_records", force: :cascade do |t|
     t.integer  "task_id"
     t.datetime "last_run"
@@ -68,6 +87,14 @@ ActiveRecord::Schema.define(version: 20180728161538) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.boolean  "run_local"
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.string   "tweet"
+    t.string   "description"
+    t.boolean  "status"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

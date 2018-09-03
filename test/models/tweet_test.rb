@@ -1,19 +1,18 @@
 # == Schema Information
 #
-# Table name: tasks
+# Table name: tweets
 #
 #  id          :integer          not null, primary key
-#  name        :string
+#  tweet       :string
 #  description :string
-#  active      :boolean
+#  status      :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  run_local   :boolean
 #
 
 require 'test_helper'
 
-class TaskTest < ActiveSupport::TestCase
+class TweetTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

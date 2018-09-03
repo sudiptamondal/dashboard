@@ -8,7 +8,9 @@
 #  active      :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  run_local   :boolean
 #
+
 require 'stack_overflow.rb'
 class Task < ApplicationRecord
 	def run_task name

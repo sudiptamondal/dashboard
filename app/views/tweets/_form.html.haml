@@ -1,0 +1,41 @@
+= form_for @tweet do |f|
+  - if @tweet.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@tweet.errors.count, "error")} prohibited this tweet from being saved:"
+      %ul
+        - @tweet.errors.full_messages.each do |message|
+          %li= message
+  %ul.style1090
+    %li=f.label :tweet
+    %li=f.text_field :tweet, placeholder: "Enter your tweet here", maxlength: 280
+    %li=f.label :description
+    %li=f.text_field :description, placeholder: "Enter the description of the tweet"
+  %ul.style1090  
+    = f.fields_for :schedule do |nf|
+      %li=nf.label :schedule_start_date
+      %li=nf.datetime_select :schedule_start_date
+      %li=nf.label :schedule_end_date
+      %li=nf.datetime_select :schedule_end_date
+      %li=nf.label :days
+      %li
+        Monday
+        =nf.check_box( :on_monday)
+        Tuesday
+        =nf.check_box( :on_tuesday)
+        Wednesday
+        =nf.check_box( :on_wednesday)
+        Thursday
+        =nf.check_box( :on_thursday)
+        Friday
+        =nf.check_box( :on_friday)
+        Saturday
+        =nf.check_box( :on_saturday)
+        Sunday
+        =nf.check_box( :on_sunday)
+      %li=nf.label :Repeat
+      %li=nf.check_box( :repeat)
+      %li=nf.label :custom
+      %li=nf.text_field :custom, placeholder: "Enter custom schedule"
+
+  .actions
+    = f.submit 'Save'

@@ -8,6 +8,7 @@
 
 # Twitter
 	Keeps a track of my twitter Followers
+	Programmable Retweeter
 
 # Database
 	Lets me play with Databases anywhere

@@ -1,0 +1,100 @@
+                          Prefix Verb       URI Pattern                                 Controller#Action
+                new_user_session GET        /users/sign_in(.:format)                    devise/sessions#new
+                    user_session POST       /users/sign_in(.:format)                    devise/sessions#create
+            destroy_user_session DELETE     /users/sign_out(.:format)                   devise/sessions#destroy
+               new_user_password GET        /users/password/new(.:format)               devise/passwords#new
+              edit_user_password GET        /users/password/edit(.:format)              devise/passwords#edit
+                   user_password PATCH      /users/password(.:format)                   devise/passwords#update
+                                 PUT        /users/password(.:format)                   devise/passwords#update
+                                 POST       /users/password(.:format)                   devise/passwords#create
+        cancel_user_registration GET        /users/cancel(.:format)                     devise/registrations#cancel
+           new_user_registration GET        /users/sign_up(.:format)                    devise/registrations#new
+          edit_user_registration GET        /users/edit(.:format)                       devise/registrations#edit
+               user_registration PATCH      /users(.:format)                            devise/registrations#update
+                                 PUT        /users(.:format)                            devise/registrations#update
+                                 DELETE     /users(.:format)                            devise/registrations#destroy
+                                 POST       /users(.:format)                            devise/registrations#create
+                           notes GET        /notes(.:format)                            notes#index
+                                 POST       /notes(.:format)                            notes#create
+                        new_note GET        /notes/new(.:format)                        notes#new
+                       edit_note GET        /notes/:id/edit(.:format)                   notes#edit
+                            note GET        /notes/:id(.:format)                        notes#show
+                                 PATCH      /notes/:id(.:format)                        notes#update
+                                 PUT        /notes/:id(.:format)                        notes#update
+                                 DELETE     /notes/:id(.:format)                        notes#destroy
+                   twitter_bases GET        /twitter_bases(.:format)                    twitter_bases#index
+                                 POST       /twitter_bases(.:format)                    twitter_bases#create
+               new_twitter_basis GET        /twitter_bases/new(.:format)                twitter_bases#new
+              edit_twitter_basis GET        /twitter_bases/:id/edit(.:format)           twitter_bases#edit
+                   twitter_basis GET        /twitter_bases/:id(.:format)                twitter_bases#show
+                                 PATCH      /twitter_bases/:id(.:format)                twitter_bases#update
+                                 PUT        /twitter_bases/:id(.:format)                twitter_bases#update
+                                 DELETE     /twitter_bases/:id(.:format)                twitter_bases#destroy
+          new_admin_user_session GET        /admin/login(.:format)                      active_admin/devise/sessions#new
+              admin_user_session POST       /admin/login(.:format)                      active_admin/devise/sessions#create
+      destroy_admin_user_session DELETE|GET /admin/logout(.:format)                     active_admin/devise/sessions#destroy
+         new_admin_user_password GET        /admin/password/new(.:format)               active_admin/devise/passwords#new
+        edit_admin_user_password GET        /admin/password/edit(.:format)              active_admin/devise/passwords#edit
+             admin_user_password PATCH      /admin/password(.:format)                   active_admin/devise/passwords#update
+                                 PUT        /admin/password(.:format)                   active_admin/devise/passwords#update
+                                 POST       /admin/password(.:format)                   active_admin/devise/passwords#create
+                      admin_root GET        /admin(.:format)                            admin/dashboard#index
+        batch_action_admin_tasks POST       /admin/tasks/batch_action(.:format)         admin/tasks#batch_action
+                     admin_tasks GET        /admin/tasks(.:format)                      admin/tasks#index
+                                 POST       /admin/tasks(.:format)                      admin/tasks#create
+                  new_admin_task GET        /admin/tasks/new(.:format)                  admin/tasks#new
+                 edit_admin_task GET        /admin/tasks/:id/edit(.:format)             admin/tasks#edit
+                      admin_task GET        /admin/tasks/:id(.:format)                  admin/tasks#show
+                                 PATCH      /admin/tasks/:id(.:format)                  admin/tasks#update
+                                 PUT        /admin/tasks/:id(.:format)                  admin/tasks#update
+                                 DELETE     /admin/tasks/:id(.:format)                  admin/tasks#destroy
+                 admin_dashboard GET        /admin/dashboard(.:format)                  admin/dashboard#index
+batch_action_admin_twitter_bases POST       /admin/twitter_bases/batch_action(.:format) admin/twitter_bases#batch_action
+             admin_twitter_bases GET        /admin/twitter_bases(.:format)              admin/twitter_bases#index
+                                 POST       /admin/twitter_bases(.:format)              admin/twitter_bases#create
+         new_admin_twitter_basis GET        /admin/twitter_bases/new(.:format)          admin/twitter_bases#new
+        edit_admin_twitter_basis GET        /admin/twitter_bases/:id/edit(.:format)     admin/twitter_bases#edit
+             admin_twitter_basis GET        /admin/twitter_bases/:id(.:format)          admin/twitter_bases#show
+                                 PATCH      /admin/twitter_bases/:id(.:format)          admin/twitter_bases#update
+                                 PUT        /admin/twitter_bases/:id(.:format)          admin/twitter_bases#update
+                                 DELETE     /admin/twitter_bases/:id(.:format)          admin/twitter_bases#destroy
+ batch_action_admin_task_records POST       /admin/task_records/batch_action(.:format)  admin/task_records#batch_action
+              admin_task_records GET        /admin/task_records(.:format)               admin/task_records#index
+                                 POST       /admin/task_records(.:format)               admin/task_records#create
+           new_admin_task_record GET        /admin/task_records/new(.:format)           admin/task_records#new
+          edit_admin_task_record GET        /admin/task_records/:id/edit(.:format)      admin/task_records#edit
+               admin_task_record GET        /admin/task_records/:id(.:format)           admin/task_records#show
+                                 PATCH      /admin/task_records/:id(.:format)           admin/task_records#update
+                                 PUT        /admin/task_records/:id(.:format)           admin/task_records#update
+                                 DELETE     /admin/task_records/:id(.:format)           admin/task_records#destroy
+       batch_action_admin_tweets POST       /admin/tweets/batch_action(.:format)        admin/tweets#batch_action
+                    admin_tweets GET        /admin/tweets(.:format)                     admin/tweets#index
+                                 POST       /admin/tweets(.:format)                     admin/tweets#create
+                 new_admin_tweet GET        /admin/tweets/new(.:format)                 admin/tweets#new
+                edit_admin_tweet GET        /admin/tweets/:id/edit(.:format)            admin/tweets#edit
+                     admin_tweet GET        /admin/tweets/:id(.:format)                 admin/tweets#show
+                                 PATCH      /admin/tweets/:id(.:format)                 admin/tweets#update
+                                 PUT        /admin/tweets/:id(.:format)                 admin/tweets#update
+                                 DELETE     /admin/tweets/:id(.:format)                 admin/tweets#destroy
+  batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format)   admin/admin_users#batch_action
+               admin_admin_users GET        /admin/admin_users(.:format)                admin/admin_users#index
+                                 POST       /admin/admin_users(.:format)                admin/admin_users#create
+            new_admin_admin_user GET        /admin/admin_users/new(.:format)            admin/admin_users#new
+           edit_admin_admin_user GET        /admin/admin_users/:id/edit(.:format)       admin/admin_users#edit
+                admin_admin_user GET        /admin/admin_users/:id(.:format)            admin/admin_users#show
+                                 PATCH      /admin/admin_users/:id(.:format)            admin/admin_users#update
+                                 PUT        /admin/admin_users/:id(.:format)            admin/admin_users#update
+                                 DELETE     /admin/admin_users/:id(.:format)            admin/admin_users#destroy
+    batch_action_admin_schedules POST       /admin/schedules/batch_action(.:format)     admin/schedules#batch_action
+                 admin_schedules GET        /admin/schedules(.:format)                  admin/schedules#index
+                                 POST       /admin/schedules(.:format)                  admin/schedules#create
+              new_admin_schedule GET        /admin/schedules/new(.:format)              admin/schedules#new
+             edit_admin_schedule GET        /admin/schedules/:id/edit(.:format)         admin/schedules#edit
+                  admin_schedule GET        /admin/schedules/:id(.:format)              admin/schedules#show
+                                 PATCH      /admin/schedules/:id(.:format)              admin/schedules#update
+                                 PUT        /admin/schedules/:id(.:format)              admin/schedules#update
+                                 DELETE     /admin/schedules/:id(.:format)              admin/schedules#destroy
+                  admin_comments GET        /admin/comments(.:format)                   admin/comments#index
+                                 POST       /admin/comments(.:format)                   admin/comments#create
+                   admin_comment GET        /admin/comments/:id(.:format)               admin/comments#show
+                                 DELETE     /admin/comments/:id(.:format)               admin/comments#destroy

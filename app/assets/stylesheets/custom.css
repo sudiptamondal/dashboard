@@ -1,0 +1,41 @@
+.style50 {
+	list-style: none;
+	float: left;
+}
+.style50 li {
+	float: left;
+	width: 48%;
+}
+.style2080 {
+	list-style: none;
+	float: left;	
+	width: 100%;
+}
+.style2080 li:nth-child(odd) {
+	float: left;
+	width: 20%;
+}
+.style2080 li:nth-child(even) {
+	float: left;
+	width: 80%;
+}
+.style1090 {
+	list-style: none;
+	float: left;	
+	width: 100%;
+	margin: 10px;
+}
+.style1090 li:nth-child(odd) {
+	text-align: right;
+	float: left;
+
+	width: 10%;
+}
+.style1090 li:nth-child(even) {
+	float: left;
+	width: 85%;
+	margin: 5px
+}
+.style1090 li label {
+	font-size: 25px;margin: 5px;
+}
