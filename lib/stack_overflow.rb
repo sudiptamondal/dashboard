@@ -1,4 +1,4 @@
-require 'selenium-webdriver'
+require 'selenium-webdriver' 
     #define driver for firefox webdriver
 module SO
     class StackOverflow

@@ -15,7 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'haml-rails'
 gem 'rufus-scheduler'
-
+gem 'selenium-webdriver'
 group :production do
   gem 'pg'
 end
@@ -25,7 +25,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'capybara'
-  gem 'selenium-webdriver'
+
   gem 'chromedriver-helper'
 end
 
