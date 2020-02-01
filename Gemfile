@@ -5,14 +5,14 @@ gem 'devise'
 gem 'cancan'
 gem 'draper'
 gem 'pundit'
-gem 'rails', '~> 5.0.2'
-gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
+gem 'rails'
+gem 'puma'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 gem 'haml-rails'
 gem 'rufus-scheduler'
 gem 'selenium-webdriver'
@@ -25,16 +25,14 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'capybara'
-
-  gem 'chromedriver-helper'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring'
   gem 'annotate'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
