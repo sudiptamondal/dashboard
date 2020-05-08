@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :bookmarks
+  resources :categories
+  resources :category_sets
   get 'static/home'
   devise_for :users
   resources :notes
