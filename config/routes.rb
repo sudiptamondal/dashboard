@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'static/index'
   get 'health/index'
+=======
+  resources :bookmarks
+  resources :categories
+  resources :category_sets
+>>>>>>> note
   get 'static/home'
   devise_for :users
   resources :notes

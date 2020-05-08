@@ -1,0 +1,21 @@
+%h1 Listing category_sets
+
+%table
+  %thead
+    %tr
+      %th Category set name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @category_sets.each do |category_set|
+      %tr
+        %td= category_set.category_set_name
+        %td= link_to 'Show', category_set
+        %td= link_to 'Edit', edit_category_set_path(category_set)
+        %td= link_to 'Destroy', category_set, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Category set', new_category_set_path

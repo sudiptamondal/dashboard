@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_03_21_130510) do
+=======
+ActiveRecord::Schema.define(version: 2020_05_08_222750) do
+>>>>>>> note
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -43,6 +47,32 @@ ActiveRecord::Schema.define(version: 2020_03_21_130510) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
+=======
+  create_table "bookmarks", force: :cascade do |t|
+    t.string "title"
+    t.string "link"
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_bookmarks_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "category_set_id", null: false
+    t.string "category_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_set_id"], name: "index_categories_on_category_set_id"
+  end
+
+  create_table "category_sets", force: :cascade do |t|
+    t.string "category_set_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+>>>>>>> note
   create_table "health_profiles", force: :cascade do |t|
     t.integer "Profile_id", null: false
     t.decimal "weight"
@@ -153,6 +183,11 @@ ActiveRecord::Schema.define(version: 2020_03_21_130510) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
+=======
+  add_foreign_key "bookmarks", "categories"
+  add_foreign_key "categories", "category_sets"
+>>>>>>> note
   add_foreign_key "health_profiles", "Profiles"
   add_foreign_key "product_prices", "Products"
 end

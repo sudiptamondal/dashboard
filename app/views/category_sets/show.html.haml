@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Category set name:
+  = @category_set.category_set_name
+
+= link_to 'Edit', edit_category_set_path(@category_set)
+\|
+= link_to 'Back', category_sets_path
