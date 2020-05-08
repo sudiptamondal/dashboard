@@ -10,7 +10,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  on_monday           :boolean
-#  on_tuesday          :boolean
+#  on_tuesday          :boolean           
 #  on_wednesday        :boolean
 #  on_thursday         :boolean
 #  on_friday           :boolean
@@ -22,4 +22,19 @@
 #
 
 class Schedule < ApplicationRecord
+    def get_tbd_schedules
+        #do nothing
+    end
+    def match_day
+        today = Date.today.strftime("%a")
+        if (self.on_monday and today == "Mon") \
+            or (self.on_tuesday and today == "Tue") \
+            or (self.on_wednesday and today == "Wed") \
+            or (self.on_thursday and today == "Thu") \
+            or (self.on_friday and today == "Fri") \
+            or (self.on_saturday and today == "Sat") \
+            or (self.on_sunday and today == "Sun")
+            true
+        end
+    end
 end

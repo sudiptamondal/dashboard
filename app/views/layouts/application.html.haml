@@ -1,10 +1,29 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Dashboard
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    / IonIcons
+    %link{:href => "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", :rel => "stylesheet"}/
+    / Theme style
+    / %link{:href => "adminlte.min.css", :rel => "stylesheet"}/
+    / Google Font: Source Sans Pro
+    %link{:href => "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700", :rel => "stylesheet"}/
+  = yield
+  / REQUIRED SCRIPTS
+  / jQuery
+  %script{:src => "#{asset_url('jquery.min.js')}"}
+  / Bootstrap
+  %script{:src => "#{asset_url('bootstrap.bundle.js')}"}
+  / AdminLTE
+  %script{:src => "#{asset_url('adminlte.js')}"}
+  / OPTIONAL SCRIPTS
+  %script{:src => "plugins/chart.js/Chart.min.js"}
+  %script{:src => "dist/js/demo.js"}
+  %script{:src => "dist/js/pages/dashboard3.js"}

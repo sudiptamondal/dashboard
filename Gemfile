@@ -33,7 +33,12 @@ group :development do
   gem 'spring'
   gem 'annotate'
   gem 'spring-watcher-listen'
+  gem 'binding_of_caller'
 end
+gem 'nokogiri'
+gem 'webpacker'
+
+gem 'react-rails'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'twitter'

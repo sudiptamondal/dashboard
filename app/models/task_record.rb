@@ -21,4 +21,8 @@ class TaskRecord < ApplicationRecord
   		stacktrace: stacktrace
   		)
   end
+  def last_run_rec task_id
+	TaskRecord.where(task_id: task_id).order("last_run desc").last
+  end
+  
 end

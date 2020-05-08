@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static/index'
+  get 'health/index'
   get 'static/home'
   devise_for :users
   resources :notes

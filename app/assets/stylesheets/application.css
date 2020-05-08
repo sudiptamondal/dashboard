@@ -12,4 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ //= fontawesome-free/css/all.min.css
+ //= adminlte.min.css
+ //= fonts/fa-solid-900.woff
  */
